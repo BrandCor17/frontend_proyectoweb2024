@@ -1,0 +1,96 @@
+/* Botón flotante */
+.instructor-button {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  width: 4em;
+  height: 4em;
+  background-color: #0ad1c8; /* Color primario */
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.instructor-button:hover {
+  background-color: #04c5a8; /* Color hover */
+  transform: scale(1.1); /* Efecto hover */
+}
+
+/* Fondo semi-transparente del modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Contenedor del modal */
+.modal-content {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 600px;
+  padding: 2em;
+  border-radius: 1em;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: fadeIn 0.3s ease-out;
+  text-align: center;
+}
+
+/* Animación de entrada del modal */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Botón de cierre */
+.close-button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  color: #213a57;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #14919b;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 1.5em;
+  }
+
+  .instructor-button {
+    width: 3.5em;
+    height: 3.5em;
+    font-size: 1.8em;
+  }
+}

@@ -1,0 +1,64 @@
+.unique-principal-container {
+  display: flex;
+}
+
+.unique-content-container {
+  flex: 1;
+  margin: 4em 1em 4em 4em;
+  width: 90%;
+}
+
+.unique-profile-container {
+  background-color: #f4f4f4;
+  padding: 2em;
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center; /* Alinea los elementos verticalmente */
+  justify-content: space-between; /* Espacia los elementos horizontalmente */
+  margin-bottom: 2em;
+  gap: 2em; /* Espaciado entre los elementos */
+}
+
+.unique-profile-text {
+  flex: 1;
+}
+
+.unique-profile-text h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.unique-profile-text p {
+  margin: 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.unique-profile-image img {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%; /* Hace la imagen redondeada */
+  object-fit: cover; /* Ajusta la imagen al contenedor */
+}
+
+.unique-btn-instructor {
+  margin-left: 5em;
+  width: 6em;
+  background-color: #ff5c5c;
+  color: #fff;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.unique-courses-container {
+  margin-top: 2em;
+}
+
+.unique-no-courses-message {
+  font-size: 1.2em;
+  color: #ff5c5c;
+  text-align: center;
+}

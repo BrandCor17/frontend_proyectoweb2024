@@ -1,0 +1,121 @@
+.unique-course-list-container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  background-color: #f4f4f9;
+}
+
+.unique-header {
+  text-align: center;
+  font-size: 1.8em;
+  color: #213a57;
+  margin-bottom: 20px;
+}
+
+.unique-course-list {
+  list-style: none;
+  padding: 0;
+}
+
+.unique-course-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #14919b;
+  color: white;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.unique-course-item:hover {
+  transform: translateY(-5px);
+  background-color: #0ad1c8;
+}
+
+.unique-assign-btn {
+  background-color: #45dfb1;
+  color: #0b6477;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.unique-assign-btn:hover {
+  background-color: #80ed99;
+}
+
+/* Modal Styles */
+.unique-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.unique-modal-content {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.unique-modal-instructor-list {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.unique-modal-instructor-list li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.unique-modal-instructor-list li:hover {
+  background-color: #cfe2ff;
+}
+
+.unique-selected {
+  background-color: #213a57;
+  color: white;
+}
+
+.unique-confirm-btn,
+.unique-cancel-btn {
+  background-color: #0b6477;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.unique-confirm-btn:hover {
+  background-color: #14919b;
+}
+
+.unique-cancel-btn:hover {
+  background-color: #f44336;
+}

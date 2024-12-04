@@ -1,0 +1,105 @@
+.unique-solicitudes-container {
+  margin: 6em;
+}
+
+.unique-solicitudes-container h2 {
+  text-align: center;
+  background-color: #d3d3d3;
+  color: #333;
+  padding: 1.5em; /* Espacio alrededor del texto */
+  margin-bottom: 2em;
+  border-radius: 12px; /* Bordes redondeados */
+  font-size: 1.5em; /* Ajuste del tamaño de fuente */
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.unique-solicitudes-table {
+  margin-top: 10em;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 1.5em; /* Espaciado entre columnas */
+  margin-top: 2em;
+}
+
+/* Estilo para las celdas de la tabla */
+.unique-solicitudes-table th,
+.unique-solicitudes-table td {
+  padding: 1.5em;
+  text-align: left;
+  font-size: 1em;
+}
+
+/* Estilo para los encabezados de las columnas */
+.unique-solicitudes-table th {
+  background-color: #00bfff;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Estilo para las celdas de datos */
+.unique-solicitudes-table td {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+/* Establecer un ancho mayor para la columna de "Nombre" */
+.unique-solicitudes-table th:nth-child(1),
+.unique-solicitudes-table td:nth-child(1) {
+  width: 15em;
+}
+
+.unique-solicitudes-table th:nth-child(2),
+.unique-solicitudes-table td:nth-child(2),
+.unique-solicitudes-table th:nth-child(3),
+.unique-solicitudes-table td:nth-child(3) {
+  width: 8em;
+}
+
+/* Estilo para los botones */
+.unique-solicitudes-buttons {
+  display: flex;
+  gap: 0.5em;
+}
+
+/* Estilo general para los botones */
+.unique-solicitudes-buttons button {
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+/* Estilo para el botón de aprobar */
+.unique-solicitudes-buttons button.unique-approve {
+  background-color: #4caf50;
+}
+
+/* Estilo para el botón de rechazar */
+.unique-solicitudes-buttons button.unique-reject {
+  background-color: #f44336;
+}
+
+/* Efecto hover para los botones */
+.unique-solicitudes-buttons button:hover {
+  opacity: 0.8;
+}
+
+/* Mensaje de error */
+.unique-error {
+  color: #f44336;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 1.5em;
+}
+
+/* Mensaje de carga */
+.unique-solicitudes-container p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #333;
+}

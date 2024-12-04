@@ -1,0 +1,67 @@
+.unique-create-course-form {
+  background-color: #ffffff;
+  padding: 2em;
+  border-radius: 0.5em;
+  box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.1);
+  max-width: 50em;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.unique-form-group {
+  margin-bottom: 1.5em;
+}
+
+.unique-form-label {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: #213a57;
+  display: block;
+}
+
+.unique-form-input,
+.unique-form-textarea {
+  padding: 0.625em;
+  border: 0.0625em solid #ddd;
+  border-radius: 0.25em;
+  font-size: 1em;
+  width: 100%;
+}
+
+.unique-form-textarea {
+  resize: vertical;
+  min-height: 6.25em;
+}
+
+.unique-form-button {
+  padding: 0.625em 1.25em;
+  background-color: #14919b;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.unique-form-button:hover {
+  background-color: #0ad1c8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .unique-create-course-form {
+    padding: 1.5em;
+  }
+  
+  .unique-form-label,
+  .unique-form-input,
+  .unique-form-textarea,
+  .unique-form-button {
+    font-size: 0.9em;
+  }
+}
+
+  

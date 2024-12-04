@@ -1,0 +1,117 @@
+.chat-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 1em;  /* Tamaño base de fuente */
+}
+
+.chat-container {
+  display: flex;
+  flex: 1;
+  margin: 6em 2em 0em 4em; /* Ajusta si usas un header fijo */
+}
+
+.contact-list {
+  width: 15em;  /* Ajusta el tamaño de la lista de contactos */
+  background-color: #f1f1f1;
+  padding: 1.25em;
+  overflow-y: auto;
+  border-right: 0.0625em solid #ccc;
+}
+
+.contact-list-title {
+  font-size: 1.25em;
+  margin-bottom: 1em;
+  color: #333;
+}
+
+.search-bar {
+  margin-bottom: 1em;
+}
+
+.loading-message, .no-contacts-message {
+  color: #777;
+}
+
+.contact-list-items {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-item {
+  padding: 0.625em;
+  cursor: pointer;
+  border-radius: 0.25em;
+  margin: 0.3125em 0;
+}
+
+.contact-item:hover {
+  background-color: #e1e1e1;
+}
+
+.contact-item.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.chat-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25em;
+}
+
+.chat-box-title {
+  margin-bottom: 1.25em;
+  font-size: 1.125em;
+}
+
+.messages {
+  flex: 1;
+  margin-bottom: 1.25em;
+  overflow-y: auto;
+}
+
+.message {
+  margin: 0.3125em 0;
+}
+
+.sent {
+  text-align: right;
+  background-color: #dcf8c6;
+}
+
+.received {
+  text-align: left;
+  background-color: #f1f1f1;
+}
+
+.message-form {
+  display: flex;
+}
+
+.message-input {
+  flex: 1;
+  padding: 0.625em;
+  margin-right: 0.625em;
+  border-radius: 0.25em;
+  border: 0.0625em solid #ccc;
+}
+
+.send-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.625em 1em;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+.no-chat-message {
+  color: #777;
+  font-size: 1.125em;
+}

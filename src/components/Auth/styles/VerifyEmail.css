@@ -1,0 +1,102 @@
+/* Estilos para el fondo del modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Contenedor del modal */
+  .modal-container {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 28em;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Título del modal */
+  .modal-container h2 {
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    color: #213a57;
+  }
+  
+  /* Texto informativo */
+  .modal-container p {
+    margin-bottom: 1.5em;
+    color: #0b6477;
+    font-size: 1em;
+  }
+  
+  /* Formulario del modal */
+  .modal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  
+  /* Input de texto */
+  .modal-input {
+    width: 100%;
+    padding: 0.75em;
+    font-size: 1em;
+    border: 0.1em solid #ccc;
+    border-radius: 0.5em;
+    transition: border-color 0.3s ease;
+  }
+  
+  .modal-input:focus {
+    border-color: #14919b;
+    outline: none;
+  }
+  
+  /* Botón del modal */
+  .modal-button {
+    background-color: #14919b;
+    color: #ffffff;
+    padding: 0.75em 2em;
+    font-size: 1em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-button:disabled {
+    background-color: #80ed99;
+    cursor: not-allowed;
+  }
+  
+  .modal-button:hover:not(:disabled) {
+    background-color: #0ad1c8;
+  }
+  
+  /* Mensaje de error */
+  .error-message {
+    color: #d9534f;
+    font-size: 0.9em;
+    margin-top: 1em;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .modal-container {
+      padding: 1.5em;
+    }
+  
+    .modal-input,
+    .modal-button {
+      font-size: 0.9em;
+    }
+  }
+  
