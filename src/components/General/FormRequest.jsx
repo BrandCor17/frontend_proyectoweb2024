@@ -28,10 +28,8 @@ const RequestInstructorRole = () => {
         return;
       }
 
-      // Definir la URL base de forma manual
       const API_URL = import.meta.env.VITE_BASE_URL;
 
-      // Hacer la solicitud PUT
       const response = await axios.put(
         `${API_URL}/api/users/request-role`, 
         { cum },

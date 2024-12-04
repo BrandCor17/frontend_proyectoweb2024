@@ -10,7 +10,7 @@ function Header({ toggleSidebar }) {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const apiUrl = import.meta.env.VITE_BASE_URL; // Usando la variable de entorno
+        const apiUrl = import.meta.env.VITE_BASE_URL; 
         const response = await fetch(`${apiUrl}/api/users/me`, {
           method: 'GET',
           headers: {
@@ -48,7 +48,7 @@ function Header({ toggleSidebar }) {
       </div>
 
       <div className="header-center">
-        <h1>InstruConnect</h1>
+        <h1>InstructConnect</h1>
       </div>
 
       <div className="header-right">

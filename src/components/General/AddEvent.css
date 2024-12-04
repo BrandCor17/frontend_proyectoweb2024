@@ -3,9 +3,9 @@
   position: fixed;
   bottom: 1em;
   right: 1em;
-  width: 4em;
-  height: 4em;
-  background-color: #0ad1c8; /* Color primario */
+  width: 2em;
+  height: 2em;
+  background-color: #0ad1c8; 
   color: #ffffff;
   border: none;
   border-radius: 50%;
@@ -21,8 +21,8 @@
 }
 
 .instructor-button:hover {
-  background-color: #04c5a8; /* Color hover */
-  transform: scale(1.1); /* Efecto hover */
+  background-color: #04c5a8; 
+  transform: scale(1.1); 
 }
 
 /* Fondo semi-transparente del modal */
@@ -32,7 +32,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;

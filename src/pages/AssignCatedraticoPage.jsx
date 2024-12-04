@@ -3,7 +3,7 @@ import Sidebar from "../components/General/Sidebar";
 import Header from "../components/General/Header";
 import axios from "axios";
 import SearchBar from "../components/General/SearchBar";
-import "./styles/AssignPage.css";
+import "./styles/AssignInstructorPage.css";
 
 const AssignCatedratico = () => {
   const [courses, setCourses] = useState([]);
@@ -13,12 +13,14 @@ const AssignCatedratico = () => {
   const [selectedCatedratico, setSelectedCatedratico] = useState(null);
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const apiUrl = import.meta.env.VITE_BASE_URL; // Usamos la variable de entorno
 
   useEffect(() => {
     // Obtener los cursos y el rol del usuario actual
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/courses/courses");
+        // Reemplazamos la URL por la variable de entorno
+        const response = await axios.get(`${apiUrl}/api/courses/courses`);
         setCourses(response.data);
 
         const currentUser = JSON.parse(localStorage.getItem("user"));
@@ -31,10 +33,10 @@ const AssignCatedratico = () => {
     fetchData();
   }, []);
 
-  // Función para obtener solo los catedráticos
   const fetchCatedraticos = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/users/users", {
+      // Usamos la variable de entorno para la URL de los usuarios
+      const response = await axios.get(`${apiUrl}/api/users/users`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -59,11 +61,9 @@ const AssignCatedratico = () => {
   };
 
   const handleConfirmAssignment = async () => {
-    const apiUrl = import.meta.env.VITE_BASE_URL; 
     if (selectedCatedratico && selectedCourse) {
       try {
         const response = await axios.patch(
-          
           `${apiUrl}/api/courses/assignCatedratico/${selectedCatedratico}`,
           { courseId: selectedCourse },
           {
@@ -92,53 +92,60 @@ const AssignCatedratico = () => {
     catedratico.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+
   return (
-    <div className="principal-container">
-      <Sidebar />
-      <Header />
-      <div className="course-list-container">
-        <h2>Lista de Cursos</h2>
-        <ul>
-          {courses.map((course) => (
-            <li key={course._id} className="course-item">
-              <span>{course.title}</span>
-              <button
-                onClick={() =>
-                  userRole === "admin" ? handleAssignCatedratico(course._id) : null
-                }
-              >
-                {userRole === "admin" ? "Asignar Catedrático" : "Sin permiso"}
-              </button>
+    <div className="course-list-page-container">
+  <Sidebar />
+  <Header />
+
+  <div className="course-list-wrapper">
+    <h2 className="course-list-heading">Lista de Cursos</h2>
+    <ul className="course-list">
+      {courses.map((course) => (
+        <li key={course._id} className="course-item">
+          <span>{course.title}</span>
+          <button
+            onClick={() =>
+              userRole === "admin" ? handleAssignCatedratico(course._id) : null
+            }
+            className="course-item-btn"
+          >
+            {userRole === "admin" ? "Asignar Catedrático" : "Sin permiso"}
+          </button>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  {isModalOpen && (
+    <div className="assign-instructor-modal">
+      <div className="modal-content-container">
+        <h3 className="modal-title">Selecciona un Catedrático</h3>
+        <SearchBar
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="search-input"
+        />
+        <ul className="instructor-list">
+          {filteredCatedraticos.map((catedratico) => (
+            <li
+              key={catedratico._id}
+              onClick={() => handleSelectCatedratico(catedratico._id)}
+              className={selectedCatedratico === catedratico._id ? "instructor-selected" : ""}
+            >
+              {catedratico.name} - <strong>{catedratico.role}</strong>
             </li>
           ))}
         </ul>
-      </div>
-
-      {isModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            <h3>Selecciona un Catedrático</h3>
-            <SearchBar
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <ul>
-              {filteredCatedraticos.map((catedratico) => (
-                <li
-                  key={catedratico._id}
-                  onClick={() => handleSelectCatedratico(catedratico._id)}
-                  className={selectedCatedratico === catedratico._id ? "selected" : ""}
-                >
-                  {catedratico.name} - <strong>{catedratico.role}</strong>
-                </li>
-              ))}
-            </ul>
-            <button onClick={handleConfirmAssignment}>Confirmar Asignación</button>
-            <button onClick={() => setIsModalOpen(false)}>Cancelar</button>
-          </div>
+        <div className="modal-actions">
+          <button onClick={handleConfirmAssignment} className="modal-confirm-btn">Confirmar Asignación</button>
+          <button onClick={() => setIsModalOpen(false)} className="modal-cancel-btn">Cancelar</button>
         </div>
-      )}
+      </div>
     </div>
+  )}
+</div>
+
   );
 };
 

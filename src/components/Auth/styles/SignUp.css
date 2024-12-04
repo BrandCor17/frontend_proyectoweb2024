@@ -8,109 +8,112 @@
     background-color: #f0f0f0;
     overflow: hidden;
     color: white;
-} 
-  
+}
+
 .signup-container {
     background-color: white;
     display: flex;
-    width: 800px;
-    height: 450px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 40px;
+    width: 1000px; /* Aumentado de 800px a 1000px */
+    height: 550px; /* Aumentado de 450px a 550px */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra más notable */
+    border-radius: 50px; /* Mayor redondeo */
     overflow: hidden;
 }
-  
+
 .signup-left {
     background-color: #2c8c8c;
     color: white;
-    padding: 40px;
+    padding: 60px; /* Aumentado para más espacio interno */
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 40px 120px 120px 40px;
+    border-radius: 50px 140px 140px 50px; /* Redondeo ajustado */
 }
-  
+
 .signup-left img {
-    width: 80px;
-    margin-bottom: 20px;
+    width: 100px; /* Aumentado de 80px a 100px */
+    margin-bottom: 30px;
 }
-  
+
 .signup-left h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 28px; /* Aumentado de 24px a 28px */
 }
-  
+
 .signup-left h2 {
-    margin: 10px 0 0;
-    font-size: 18px;
+    margin: 15px 0 0;
+    font-size: 22px; /* Aumentado de 18px a 22px */
 }
-  
+
 .signup-right {
     background-color: white;
-    padding: 40px;
+    padding: 60px; /* Aumentado para más espacio interno */
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-  
+
 .signup-right img {
-    width: 80px;
-    margin-bottom: 20px;
+    width: 100px; /* Aumentado de 80px a 100px */
+    margin-bottom: 30px;
 }
-  
+
 .signup-right h2 {
-    margin: 0 0 2%;
-    font-size: 24px;
+    margin: 0 0 3%;
+    font-size: 28px; /* Aumentado de 24px a 28px */
     color: #2c8c8c;
 }
-  
+
 .signup-right input {
-    width: 90%;
-    padding: 8px;
-    margin: 0.5%;
+    width: 95%; /* Más ancho */
+    padding: 12px; /* Aumentado de 8px a 12px */
+    margin: 1%; /* Más espacio entre elementos */
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px; /* Más redondeado */
+    font-size: 16px; /* Tamaño de texto aumentado */
 }
-  
+
 .signup-right a {
     color: #2c8c8c;
     text-decoration: none;
-    margin: 10px 0;
+    margin: 15px 0; /* Más espacio entre enlaces */
+    font-size: 16px; /* Aumentado de tamaño */
 }
-  
+
 .signup-right button {
     background-color: #2c8c8c;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Botones más grandes */
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; /* Más redondeado */
     cursor: pointer;
-    margin: 5% 40% 5% 30%;
-    
+    margin: 5% auto; /* Centrado automático */
+    font-size: 16px; /* Aumentado de tamaño */
 }
 
-.signup-left  button {
+.signup-left button {
     background-color: #ffffff;
     color: #2c8c8c;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Botones más grandes */
     border: none;
     margin: 15%;
-    border-radius: 5px;
+    border-radius: 8px; /* Más redondeado */
     cursor: pointer;
     align-items: center;
-  }
+    font-size: 16px; /* Aumentado de tamaño */
+}
 
-  .input-error {
+.input-error {
     border: 2px solid red;
     background-color: #ffe6e6;
 }
 
 .error-message {
     color: red;
-    font-size: 12px;
-    margin-top: 5px;
+    font-size: 14px; /* Aumentado de 12px a 14px */
+    margin-top: 10px; /* Más espacio para claridad */
 }

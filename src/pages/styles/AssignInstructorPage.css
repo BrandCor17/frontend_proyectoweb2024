@@ -1,0 +1,152 @@
+/* Container general */
+.course-list-page-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f9;
+    height: 100vh;
+    margin: 5em 2em 0em 5em;
+  }
+  
+  /* Contenedor de la lista de cursos */
+  .course-list-wrapper {
+    margin: 20px;
+  }
+  
+  .course-list-heading {
+    font-size: 2rem;
+    color: #213a57;
+  }
+  
+  .course-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .course-item:hover {
+    background-color: #14919b;
+    transform: scale(1.02);
+  }
+  
+  .course-item-btn {
+    background-color: #0ad1c8;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .course-item-btn:hover {
+    background-color: #45dfb1;
+  }
+  
+  /* Modal */
+  .assign-instructor-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+    color: #213a57;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #0b6477;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #14919b;
+  }
+  
+  .instructor-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .instructor-list li {
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin: 5px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .instructor-list li:hover {
+    background-color: #14919b;
+    transform: scale(1.05);
+  }
+  
+  .instructor-selected {
+    background-color: #80ed99;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .modal-confirm-btn, .modal-cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-confirm-btn {
+    background-color: #0ad1c8;
+    color: white;
+  }
+  
+  .modal-confirm-btn:hover {
+    background-color: #45dfb1;
+  }
+  
+  .modal-cancel-btn {
+    background-color: #ff4444;
+    color: white;
+  }
+  
+  .modal-cancel-btn:hover {
+    background-color: #ff7070;
+  }
+  

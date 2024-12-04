@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/General/Header";
-import "./styles/UserList.css";
+import "./styles/UserListAdmin.css";
 import Sidebar from "../components/General/Sidebar";
 import SearchBar from "../components/General/SearchBar";
 

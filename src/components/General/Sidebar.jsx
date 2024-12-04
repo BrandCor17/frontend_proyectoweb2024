@@ -19,6 +19,7 @@ function Sidebar({ isOpen }) {
   const isUserListActive = location.pathname === "/User-list";
   const isAssignInstructorActive = location.pathname === "/assign-instructor";
   const isAssignCatedraticoActive = location.pathname === "/assign-catedratico";
+  const isRequestsActive = location.pathname === "/Requests";
 
   const isChatActive = location.pathname === "/chat";
 
@@ -72,21 +73,21 @@ function Sidebar({ isOpen }) {
           {(user?.role === "admin") && (
             <li className={`menu-item ${isAssignCatedraticoActive ? "active" : ""}`} onClick={() => handleNavigation('/assign-catedratico')}>
               <i className="fas fa-user-plus"></i>
-              {isOpen && <span>Assign</span>}
+              {isOpen && <span>Assignaciones</span>}
             </li>
           )}
 
           {user?.role === "catedratico" && (
-            <li className="menu-item" onClick={() => handleNavigation('/Requests')}>
+            <li className={`menu-item ${isRequestsActive ? "active" : ""}`} onClick={() => handleNavigation('/Requests')}>
               <i className="fas fa-users"></i>
-              {isOpen && <span>Group</span>}
+              {isOpen && <span>Solicitudes</span>}
             </li>
           )}
 
           {user?.role === "admin" && (
             <li className={`menu-item ${isUserListActive ? "active" : ""}`} onClick={() => handleNavigation('/User-list')}>
               <i className="fas fa-trash"></i>
-              {isOpen && <span>Trash</span>}
+              {isOpen && <span>Usuarios</span>}
             </li>
           )}
         </ul>

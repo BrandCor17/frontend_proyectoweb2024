@@ -1,0 +1,145 @@
+/* Estilo general para el contenedor principal */
+.unique-principal-container {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+  }
+  
+  /* Contenedor de la lista */
+  .unique-list-container {
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Encabezado de la lista */
+  .unique-list-header h2 {
+    font-size: 1.5em;
+    color: #213A57;
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo de la tabla */
+  .unique-user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .unique-user-table th,
+  .unique-user-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .unique-user-table th {
+    background-color: #0B6477;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  .unique-user-table tr:nth-child(even) {
+    background-color: #f7f7f7;
+  }
+  
+  .unique-user-table tr:hover {
+    background-color: #e1f1f7;
+  }
+  
+  /* Estilo de los botones dentro de la tabla */
+  .unique-delete-btn,
+  .unique-change-role-btn {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .unique-delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
+  .unique-delete-btn:hover {
+    background-color: #ff3333;
+  }
+  
+  .unique-change-role-btn {
+    background-color: #0AD1C8;
+    color: white;
+  }
+  
+  .unique-change-role-btn:hover {
+    background-color: #14919B;
+  }
+  
+  /* Estilo del modal */
+  .unique-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .unique-modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .unique-modal h3 {
+    font-size: 1.2em;
+    color: #213A57;
+    margin-bottom: 15px;
+  }
+  
+  .unique-modal-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .unique-cancel-btn,
+  .unique-confirm-btn {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .unique-cancel-btn {
+    background-color: #ddd;
+    color: #213A57;
+  }
+  
+  .unique-cancel-btn:hover {
+    background-color: #bbb;
+  }
+  
+  .unique-confirm-btn {
+    background-color: #0AD1C8;
+    color: white;
+  }
+  
+  .unique-confirm-btn:hover {
+    background-color: #14919B;
+  }
+  

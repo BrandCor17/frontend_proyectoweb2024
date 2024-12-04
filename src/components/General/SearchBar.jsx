@@ -54,8 +54,8 @@ const styles = {
     fontSize: "16px",
   },
   button: {
-    backgroundColor: "#007BFF",
-    color: "white",
+    backgroundColor: "",
+    color: "black",
     border: "none",
     padding: "1em",
     cursor: "pointer",

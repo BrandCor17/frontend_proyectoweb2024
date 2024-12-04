@@ -71,8 +71,7 @@ const CourseCard = ({ courseId, title, cycle, instructor, participants, userRole
       <img src={sampleImage} alt="Card background" className="card-image" />
       <div className="card-content">
         <h3 className="card-title">{title}</h3>
-        <p className="card-cycle">{cycle}</p>
-        <p className="card-instructor">{instructor}</p>
+        <p className="card-cycle">Ciclo: {cycle}</p>
         <p className="card-participants">{participants} participantes</p>
 
         {!isHomePage && userRole !== "admin" && userRole !== "catedratico" && (

@@ -24,6 +24,7 @@ const SignUp = () => {
         password: '',
         confirmPassword: '',
         imageLink: '',
+        role: 'student', 
     });
 
     const navigate = useNavigate();
@@ -136,7 +137,6 @@ const SignUp = () => {
                 </div>
 
                 <div className="signup-right">
-                    <img src="https://uca.edu.sv/wp-content/themes/kubo/images/logo-uca.png" alt="UCA Logo" />
                     <h2>Crear cuenta</h2>
                     <form onSubmit={handleSubmitRegister}>
                         <InputField

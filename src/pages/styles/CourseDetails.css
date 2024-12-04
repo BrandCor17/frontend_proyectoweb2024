@@ -7,10 +7,11 @@
 
 /* Header personalizado */
 .custom-header {
-  background-image: url('path_to_background_image.jpg');
+  margin: 1em;
+  background-color: rgb(196, 250, 254);
   background-size: cover;
-  width: 100%;
-  padding: 2em 0;
+  border-radius: 1em;
+  padding: 2em 5em;
   text-align: center;
   color: #333;
 }
@@ -35,9 +36,10 @@
 /* Sidebar */
 .custom-sidebar {
   flex: 1;
-  background-color: #fff;
+  background-color: rgba(193, 193, 193, 0.665);
   padding: 2em;
   margin-right: 2em;
+  border-radius: 10px;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
 }
 
@@ -129,3 +131,4 @@
 .resource-link:hover {
   text-decoration: underline;
 }
+

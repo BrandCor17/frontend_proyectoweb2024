@@ -18,7 +18,7 @@ const Calendar = () => {
     const fetchEvents = async () => {
       console.log("Iniciando solicitud para obtener eventos de los cursos donde el usuario está inscrito...");
       try {
-        const apiUrl = import.meta.env.VITE_BASE_URL; // Usando la variable de entorno
+        const apiUrl = import.meta.env.VITE_BASE_URL; // Definimos la URL base
         const response = await fetch(`${apiUrl}/api/events/events/user`, { 
           method: "GET",
           headers: {
@@ -49,29 +49,33 @@ const Calendar = () => {
     fetchEvents();
   }, []);
   
+
   return (
-    <div className="principal-container">
-      <Header toggleSidebar={toggleSidebar} />
-      <Sidebar isOpen={isOpen} />
+    <div className="calendar-principal-container">
+  <Header toggleSidebar={toggleSidebar} />
+  <Sidebar isOpen={isOpen} />
 
-      <div className="calendar-container">
-        <h2>Eventos de tus Cursos</h2>
+  <div className="calendar-content-container">
+    <h2 className="calendar-title">Eventos de tus Cursos</h2>
 
-        <AddButton />
-
-        {loading ? (
-          <p>Cargando eventos...</p>
-        ) : events.length === 0 ? (
-          <p>No hay eventos disponibles para tus cursos</p>
-        ) : (
-          <ul>
-            {events.map((event) => (
-              <EventItem key={event._id} event={event} />
-            ))}
-          </ul>
-        )}
-      </div>
+    <div className="calendar-add-button">
+      <AddButton />
     </div>
+
+    {loading ? (
+      <p className="calendar-loading-message">Cargando eventos...</p>
+    ) : events.length === 0 ? (
+      <p className="calendar-no-events-message">No hay eventos disponibles para tus cursos</p>
+    ) : (
+      <ul className="calendar-events-list">
+        {events.map((event) => (
+          <EventItem key={event._id} event={event} />
+        ))}
+      </ul>
+    )}
+  </div>
+</div>
+
   );
 };
 

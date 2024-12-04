@@ -17,7 +17,7 @@ const Requests = () => {
   const fetchSolicitudes = async () => {
     console.log("Iniciando solicitud para obtener solicitudes...");
     try {
-      const apiUrl = import.meta.env.VITE_BASE_URL; // Usar la variable de entorno para la URL base
+      const apiUrl = import.meta.env.VITE_BASE_URL; 
       const response = await fetch(`${apiUrl}/api/users/pending-requests`, {
         method: "GET",
         headers: {

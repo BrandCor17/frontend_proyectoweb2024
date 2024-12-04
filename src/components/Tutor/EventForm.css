@@ -30,7 +30,7 @@
 .event-input-label {
   display: block;
   margin-bottom: 0.5em;
-  color: #213A57; /* Azul oscuro */
+  color: #213A57;
   font-size: 1em;
 }
 
@@ -59,13 +59,13 @@
 .event-error-message,
 .event-no-courses {
   font-size: 1em;
-  color: #0B6477; /* Azul verdoso */
+  color: #0B6477; 
 }
 
 /* Títulos */
 .event-form-title {
   font-size: 1.5em;
-  color: #0AD1C8; /* Verde claro */
+  color: #0AD1C8; 
   margin-bottom: 1.5em;
 }
 

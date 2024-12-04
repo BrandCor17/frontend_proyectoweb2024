@@ -17,10 +17,13 @@ import AssignInstructor from './pages/AssignInstructorPage';
 import AssignCatedratico from './pages/AssignCatedraticoPage';
 import Chat from './pages/Chat';
 import CourseDetails from './pages/CourseDetails';
+
 const App = () => {
   const { token } = useContext(AuthContext);
 
   console.log("Token en App.jsx:", token); 
+
+  
 
   return (
     <Router>
