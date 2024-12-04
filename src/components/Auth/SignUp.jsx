@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import usePost from '../../hooks/usePost';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import AdminModal from '../General/AdminModal';
 const URL = import.meta.env.VITE_BASE_URL;
 
 const SignUp = () => {
@@ -27,15 +27,14 @@ const SignUp = () => {
         role: 'student', 
     });
 
+    const [isAdminModalOpen, setIsAdminModalOpen] = useState(false); // Estado para el modal
     const navigate = useNavigate();
     const { postData, loading } = usePost(`${URL}/api/users/register`);
 
-    // Validaciones de formulario
     const validateForm = () => {
         let isValid = true;
         let formErrors = { name: '', email: '', password: '', confirmPassword: '', imageLink: '' };
 
-        // Validación del nombre 
         if (!formData.name) {
             formErrors.name = 'El nombre es obligatorio';
             isValid = false;
@@ -44,7 +43,6 @@ const SignUp = () => {
             isValid = false;
         }
 
-        // Validación del correo electrónico
         if (!formData.email) {
             formErrors.email = 'El correo electrónico es obligatorio';
             isValid = false;
@@ -53,7 +51,6 @@ const SignUp = () => {
             isValid = false;
         }
 
-        // Validación de la contraseña (mínimo 8 caracteres)
         if (!formData.password) {
             formErrors.password = 'La contraseña es obligatoria';
             isValid = false;
@@ -62,13 +59,11 @@ const SignUp = () => {
             isValid = false;
         }
 
-        // Validación de confirmación de contraseña
         if (formData.password !== formData.confirmPassword) {
             formErrors.confirmPassword = 'Las contraseñas no coinciden';
             isValid = false;
         }
 
-        // Validación del enlace de la imagen (opcional)
         if (formData.imageLink && !/^https?:\/\/.*\.(jpg|jpeg|png|gif)$/.test(formData.imageLink)) {
             formErrors.imageLink = 'Por favor, ingresa un enlace de imagen válido (jpg, jpeg, png, gif)';
             isValid = false;
@@ -86,7 +81,6 @@ const SignUp = () => {
         });
     };
 
-    // Manejar el envío del formulario
     const handleSubmitRegister = async (e) => {
         e.preventDefault();
 
@@ -121,9 +115,12 @@ const SignUp = () => {
         }
     };
 
-    // Redirigir al login
     const handleLoginRedirect = () => {
         navigate('/');
+    };
+
+    const handleAdminRedirect = () => {
+        setIsAdminModalOpen(true); // Abrir el modal de administrador
     };
 
     return (
@@ -198,14 +195,22 @@ const SignUp = () => {
                         />
                         {errors.imageLink && <span className="error-message">{errors.imageLink}</span>}
 
-                        <button type="submit" disabled={loading}>
-                            {loading ? 'Cargando...' : 'Registrarse'}
-                        </button>
+                        <div className="button-container">
+                            <button type="submit" disabled={loading}>
+                                {loading ? 'Cargando...' : 'Registrarse'}
+                            </button>
+                            <button type="button" className="admin-button" onClick={handleAdminRedirect}>
+                                Admin
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
 
-            <ToastContainer /> {/* Contenedor de notificaciones */}
+            {/* Modal de administrador */}
+            <AdminModal isOpen={isAdminModalOpen} onClose={() => setIsAdminModalOpen(false)} />
+
+            <ToastContainer />
         </div>
     );
 };
